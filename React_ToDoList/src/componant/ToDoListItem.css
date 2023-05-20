@@ -9,14 +9,14 @@ p{
     font-family: "Prompt";
     font-size: 20px;
     display : inline-block;
-    width: 60%;
     text-align: left;
+    width : 60%
 }
 
 .inputBox{
     display : inline-block;
-    width: 30%;
-    align-items: center;
+    width: 10%;
+    align-items: normal;
     box-sizing: 20px;
 
     /* position: absolute; */
@@ -27,4 +27,15 @@ p{
 
 input:checked ~ .inputBox {
     background-color: #00ff2f;
+}
+
+.iconBox{
+    display: inline-block;
+    align-items: left;
+    width : 20%; 
+}
+
+.FontAwesome{
+    margin-right: 10px;
+    height: 20px;
 }
