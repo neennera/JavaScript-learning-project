@@ -1,0 +1,30 @@
+.toDoBox{
+    border: 3px solid #313131;
+    display : block;
+    margin : 10px 0 0 0;
+    padding : 10px;
+}
+
+p{
+    font-family: "Prompt";
+    font-size: 20px;
+    display : inline-block;
+    width: 60%;
+    text-align: left;
+}
+
+.inputBox{
+    display : inline-block;
+    width: 30%;
+    align-items: center;
+    box-sizing: 20px;
+
+    /* position: absolute; */
+
+    height: 25px;
+    background-color: #eee;
+}
+
+input:checked ~ .inputBox {
+    background-color: #00ff2f;
+}
