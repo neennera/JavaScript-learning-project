@@ -1,9 +1,80 @@
+.wrapperContainer{
+    display: block;
+}
+
+/* scroll box & scroll bar */
 .listContainer{
     display: block;
+    overflow: auto;
+    height: 50vh;
     margin: 50px 0px 50px 0px;
 }
 
-.text{
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+    
+::-webkit-scrollbar-thumb {
+    background: #000;  
+    border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background: #444444;  
+}
+
+/* edit bar */
+.Bar{
+    border: 3px solid #000;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin : 10px 5px 0 0;
+    padding : 10px;
+    /* height: 70px; */
+    height: auto;
+}
+.mainBox{
+    width : 80%;
+    word-wrap: anywhere;
+}
+.smallBox{
+    width : 20%;
+}
+
+
+input{
     font-family: "Prompt";
-    font-size: 30px;
+    height: 30px;
+    font-size: 15px;    
+}
+
+p{
+    display: inline-flex;
+    font-family: "Prompt";
+    font-size: 20px;
+    text-align: left;
+}
+
+
+.Button{
+    background-color: #000;
+    border-radius: 5px;
+    color : white;
+    height: 40px;
+    width: 100%;
+}
+
+/* icon */
+
+.checkBox{
+    width: 25px;
+    height: 25px;
+}
+
+
+.FontAwesome{
+    margin-right: 10px;
+    height: 23px;
 }

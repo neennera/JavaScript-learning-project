@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 
-import "./AddItemBar.css"
-
 function AddItemBar({addToDo}){ //รับฟังก์ชั่น addToDo (ต้องสะกดให้ตรง)
     const [value, setValue] = useState("");
     // เราจะส่งค่าที่ได้จาก รnput ขึ้นไปหา todosWrapper ผ่าน stage
@@ -14,13 +12,14 @@ function AddItemBar({addToDo}){ //รับฟังก์ชั่น addToDo (
         setValue("")
     }
     return (
-        <form className="taskInputBar" onSubmit={handleSubmit}>
-          <input type='text' className="toDoInput" placeholder="What task you want to do?"
-            value={value} onChange={(e)=> setValue(e.target.value)}/>
-            {/* เพิ่ม use stage มาเก็บค่าจาก input ของ form  หาก change ให้เก็บค่าไว้ใน value*/}
-            {/* พอกด submit จะเอา value ไปเพิ่มใน toDoList ผ่าน AddToDo */}
-            {/* ให้ value={value} เพื่อที่พอเรากด add เราจะเคลียร์ค่าใน form*/}
-          <input type="submit" value="Add Task" className="Button"/>
+        <form className="Bar" onSubmit={handleSubmit}>
+          <div className="mainBox">
+            <input style={{width:"90%"}} type='text' className="toDoInput" placeholder="What task you want to do?"
+              value={value} onChange={(e)=> setValue(e.target.value)}/>
+          </div>
+          <div className="smallBox">
+            <input type="submit" value="Add Task" className="Button"/>
+          </div>
         </form>
     );
 }
