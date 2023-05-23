@@ -1,18 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import react, { useState } from 'react'
 import './App.css'
 import ToDoWrapper from './componant/ToDoWrapper'
 import HeadingCover from './componant/HeadingCover'
 
 function App() {
+  const [completePersent, setCompletePersent] = useState(0)
+
+  const changeCompletePersent = value  => {
+    setCompletePersent(value)
+  }
+
   return (
     <div className='App'> 
-      <div className='column' style={{width:"30vw"}}>
-        <ToDoWrapper/>
+      <div style={{width:"30vw"}}>
+        <ToDoWrapper changeCompletePersent={changeCompletePersent}/>
       </div>
-      <div className='column' style={{width:"60vw"}}>
-        <HeadingCover/>
+      <div style={{width:"60vw"}}>
+        <HeadingCover completePersent={completePersent}/>
       </div>
     </div>
   )

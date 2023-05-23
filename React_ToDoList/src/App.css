@@ -12,11 +12,7 @@
 }
 
 .App{
-  display: block;
+  display: flex;
   width: 90vw;
   align-items: top;
-}
-
-.column{
-  display: inline-block;
 }

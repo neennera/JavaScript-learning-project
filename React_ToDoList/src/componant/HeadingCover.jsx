@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import TheProgressBar from "./TheProgressBar";
 import "./HeadingCover.css"
+import YouTubePlayer from "./YouTubePlayer";
 
-function HeadingCover(){
+function HeadingCover(props){
     const [clock, setClock] = useState()
 
     useEffect(()=>{
@@ -19,10 +21,10 @@ function HeadingCover(){
     },[])
 
     return (
-        <div className="Wrapper">
+        <div className="headerContainer">
             <h1>{clock}</h1>
-            
-            
+            <TheProgressBar complete={props.completePersent}/>
+            {/* <YouTubePlayer/> */}
         </div>
         
     );

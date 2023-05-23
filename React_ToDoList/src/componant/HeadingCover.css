@@ -1,5 +1,11 @@
-.wrapperContainer{
-    display: block;
-    align-items: center;
-    text-align: top;
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.musicFontAwesome{
+    height: 30px;
+    width: 30px;
+    margin : 15px;
 }

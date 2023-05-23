@@ -12,7 +12,9 @@ const ToDoListItem = ({taskItem, ToggleCompleted, deleteToDo, editToDoIsEditing}
                 <div style={{display:"inline-flex"}}>
                     <input className="checkBox" type="checkbox" checked={taskItem.completed}
                     onClick={() => ToggleCompleted(taskItem.id)}/></div>
-                <div style={{display:"inline-flex"}}><p style={{margin : "10px"}}>{taskItem.task}</p></div>
+                <div style={{display:"inline-flex"}}><p style={{margin : "10px", 
+                    textDecoration:taskItem.completed === true ? "line-through solid #000" : "none"}}>
+                        {taskItem.task}</p></div>
                 
             </div>
             
